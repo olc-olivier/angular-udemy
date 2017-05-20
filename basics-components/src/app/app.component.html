@@ -4,6 +4,11 @@
       <h3>I'm in the AppComponent!</h3>
       <hr>
       <app-servers></app-servers>
+      <hr>
+      <button (click)="show = !show">{{show ? 'Display Warning Message' : 'Display Success Message'}}</button>
+      <hr>
+      <app-success-alert *ngIf="show"></app-success-alert>
+      <app-warning-alert *ngIf="!show"></app-warning-alert>
       <!--<div app-servers></div>-->
       <!--<div class="app-servers"></div>-->
     </div>
